@@ -13,9 +13,17 @@
 
 ### Topologi
 
+![topo-cpt-modul4](https://github.com/user-attachments/assets/551cfd95-ce19-43dd-a21e-f43a0be6b1e3)
+
 ### Rute
 
+![Route](https://github.com/user-attachments/assets/1800c614-e537-456a-87fd-cc42b43c593d)
+
 ### Pembagian IP - VLSM
+
+![Pembagian IP](https://github.com/user-attachments/assets/996a62cd-a02b-44bf-9062-67d69ef6d71f)
+
+![Section 1](https://github.com/user-attachments/assets/8633c8bd-9b7b-4c36-ae41-405b8c0a8c65)
 
 ### Konfigurasi CPT - VLSM
 
