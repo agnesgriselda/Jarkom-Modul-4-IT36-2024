@@ -318,7 +318,7 @@ Next Hop: 10.81.19.49
 ```
 ## For Tys
 ```
-IPv4 Address 10.81.18.58
+IPv4 Address 10.81.19.58
 Netmask 255.255.255.248
 Default Gateway 10.81.19.57
 ```
