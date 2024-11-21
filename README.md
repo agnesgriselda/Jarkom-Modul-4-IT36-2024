@@ -813,5 +813,142 @@ Tree
 ![image](https://github.com/user-attachments/assets/5897fb21-4077-49b8-98df-f82a8a655ba4)
 
 ### Konfigurasi GNS3 - CIDR
+HoloLive
+```
+# NAT
+auto eth0
+iface eth0 inet dhcp
 
+# A8
+auto eth1
+iface eth1 inet static
+    address 10.81.208.1
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A9
+auto eth2
+iface eth2 inet static
+    address 10.81.160.1
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+    
+# A16
+auto eth3
+iface eth3 inet static
+    address 10.81.64.1
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+up iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.81.0.0/16
+
+# apt update
+# apt install net-tools nano -y
+
+# Holo-EN
+# route add -net 10.68.196.0 netmask 255.255.255.252 gw 10.68.208.2 # Hololive -> Holo-Myth
+# route add -net 10.68.200.32 netmask 255.255.255.252 gw 10.68.208.2 # Hololive -> HoloAdvent
+# route add -net 10.68.200.0 netmask 255.255.255.224 gw 10.68.208.2 # Hololive -> A7
+# route add -net 10.68.192.0 netmask 255.255.254.0 gw 10.68.208.2 # Hololive -> A4
+# route add -net 10.68.194.128 netmask 255.255.255.248 gw 10.68.208.2 # Hololive -> Project-Hope, Holo-Council
+# route add -net 10.68.194.64 netmask 255.255.255.248 gw 10.68.208.2 # Hololive -> A3
+# route add -net 10.68.194.0 netmask 255.255.255.192 gw 10.68.208.2 # Hololive -> A1
+
+# Holo-ID
+# route add -net 10.68.192.0 netmask 255.255.255.252 gw 10.68.160.2 # Hololive -> AREA15
+# route add -net 10.68.136.64 netmask 255.255.255.252 gw 10.68.160.2 # Hololive -> holoro
+# route add -net 10.68.146.0 netmask 255.255.255.252 gw 10.68.160.2 # Hololive -> holoh3ro
+# route add -net 10.68.128.0 netmask 255.255.252.0 gw 10.68.160.2 # Hololive -> A11
+# route add -net 10.68.136.0 netmask 255.255.255.192 gw 10.68.160.2 # Hololive -> A13
+# route add -net 10.68.144.0 netmask 255.255.254.0 gw 10.68.160.2 # Hololive -> A15
+
+# Holo-JP
+# route add -net 10.68.32.0 netmask 255.255.255.248 gw 10.68.64.2 # Hololive -> DEV_IS, GEN:0
+# route add -net 10.68.16.0 netmask 255.255.255.240 gw 10.68.64.2 # Hololive -> A18
+# route add -net 10.68.0.0 netmask 255.255.248.0 gw 10.68.64.2 # Hololive -> GEN:1
+# route add -net 10.68.8.0 netmask 255.255.254.0 gw 10.68.64.2 # Hololive -> A20
+# route add -net 10.68.10.128 netmask 255.255.255.252 gw 10.68.64.2 # Hololive -> GAMERS
+# route add -net 10.68.10.0 netmask 255.255.255.128 gw 10.68.64.2 # Hololive -> A22
+````
+
+HoloEN
+```
+# A8
+auto eth0
+iface eth0 inet static
+    address 10.81.208.2
+    netmask 255.255.255.252
+    gateway 10.81.208.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A5
+auto eth1
+iface eth1 inet static
+    address 10.81.196.1
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A6
+auto eth2
+iface eth2 inet static
+    address 10.81.200.33
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# apt update
+# apt install net-tools nano
+
+# route add -net 10.81.192.0 netmask 255.255.254.0 gw 10.81.196.2 # Holo-EN -> A4
+# route add -net 10.81.200.0 netmask 255.255.255.224 gw 10.81.200.34 # Holo-EN -> A7
+# route add -net 10.81.194.128 netmask 255.255.255.248 gw 10.81.196.2 # Holo-EN -> Project-Hope, Holo-Council
+# route add -net 10.81.194.64 netmask 255.255.255.248 gw 10.81.196.2 # Holo-EN -> A3
+# route add -net 10.81.194.0 netmask 255.255.255.192 gw 10.81.196.2 # Holo-EN -> A1
+
+```
+HoloMyth
+```
+# A5
+auto eth0
+iface eth0 inet static
+    address 10.81.196.2
+    netmask 255.255.255.252
+    gateway 10.81.196.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A4
+auto eth1
+iface eth1 inet static
+    address 10.81.192.1
+    netmask 255.255.254.0
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A2
+auto eth2
+iface eth2 inet static
+    address 10.81.194.129
+    netmask 255.255.255.248
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# route add -net 10.81.194.64 netmask 255.255.255.248 gw 10.81.194.130 # Holo-Myth -> A3
+# route add -net 10.81.194.0 netmask 255.255.255.192 gw 10.81.194.131 # Holo-Myth -> A1
+
+```
+HoloAdvent
+```
+# A6
+auto eth0
+iface eth0 inet static
+    address 10.81.200.34
+    netmask 255.255.255.252
+    gateway 10.81.200.33
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A7
+auto eth1
+iface eth1 inet static
+    address 10.81.200.1
+    netmask 255.255.255.224
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+```
 
