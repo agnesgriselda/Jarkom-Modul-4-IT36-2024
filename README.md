@@ -951,4 +951,511 @@ iface eth1 inet static
     up echo nameserver 192.168.122.1 > /etc/resolv.conf
 
 ```
+HoloCouncil
+```
+# A2
+auto eth0
+iface eth0 inet static
+    address 10.81.194.131
+    netmask 255.255.255.248
+    gateway 10.81.194.129
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A1
+auto eth1
+iface eth1 inet static
+    address 10.81.194.1
+    netmask 255.255.255.192
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Bae_Funa
+```
+# A1
+auto eth0
+iface eth0 inet static
+    address 10.81.194.3
+    netmask 255.255.255.192
+    gateway 10.81.194.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Biboo
+```
+# A7
+auto eth0
+iface eth0 inet static
+    address 10.81.200.4
+    netmask 255.255.255.224
+    gateway 10.81.200.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+FuwaMoco
+```
+# A7
+auto eth0
+iface eth0 inet static
+    address 10.81.200.2
+    netmask 255.255.255.224
+    gateway 10.81.200.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Gura_Ame_Ina
+```
+# A4
+auto eth0
+iface eth0 inet static
+    address 10.81.192.2
+    netmask 255.255.254.0
+    gateway 10.81.192.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Irys
+```
+# A3
+auto eth0
+iface eth0 inet static
+    address 10.81.194.66
+    netmask 255.255.255.248
+    gateway 10.81.194.65
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Kiara_Calli
+```
+# A4
+auto eth0
+iface eth0 inet static
+    address 10.81.192.3
+    netmask 255.255.254.0
+    gateway 10.81.192.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Kronii_mumei
+```
+# A1
+auto eth0
+iface eth0 inet static
+    address 10.81.194.2
+    netmask 255.255.255.192
+    gateway 10.81.194.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Project-Hope
+```
+# A2
+auto eth0
+iface eth0 inet static
+    address 10.81.194.130
+    netmask 255.255.255.248
+    gateway 10.81.194.129
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A3
+auto eth1
+iface eth1 inet static
+    address 10.81.194.65
+    netmask 255.255.255.248
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Shiori_Nerissa
+```
+# A7
+auto eth0
+iface eth0 inet static
+    address 10.81.200.3
+    netmask 255.255.255.224
+    gateway 10.81.200.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+HoloID
+```
+# A9
+auto eth0
+iface eth0 inet static
+    address 10.81.160.2
+    netmask 255.255.255.252
+    gateway 10.81.160.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A10
+auto eth1
+iface eth1 inet static
+    address 10.81.192.1
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+    
+# A12
+auto eth2
+iface eth2 inet static
+    address 10.81.136.65
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A14
+auto eth3
+iface eth3 inet static
+    address 10.81.146.1
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# apt update
+# apt install net-tools nano -y
+
+# route add -net 10.81.128.0 netmask 255.255.252.0 gw 10.81.192.2 # Holo-ID -> A11
+# route add -net 10.81.136.0 netmask 255.255.255.192 gw 10.81.136.66 # Holo-ID -> A13
+# route add -net 10.81.144.0 netmask 255.255.254.0 gw 10.81.146.2 # Holo-ID -> A15
+
+```
+Anya
+```
+# A13
+auto eth0
+iface eth0 inet static
+    address 10.81.136.3
+    netmask 255.255.255.192
+    gateway 10.81.136.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+AREA15
+```
+# A10
+auto eth0
+iface eth0 inet static
+    address 10.81.192.2
+    netmask 255.255.255.252
+    gateway 10.81.192.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A11
+auto eth1
+iface eth1 inet static
+    address 10.81.128.1
+    netmask 255.255.252.0
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+holoh3ro
+```
+# A14
+auto eth0
+iface eth0 inet static
+    address 10.81.146.2
+    netmask 255.255.255.252
+    gateway 10.81.146.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A15
+auto eth1
+iface eth1 inet static
+    address 10.81.144.1
+    netmask 255.255.254.0
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+```
+holoro
+```
+# A12
+auto eth0
+iface eth0 inet static
+    address 10.81.136.66
+    netmask 255.255.255.252
+    gateway 10.81.136.65
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A13
+auto eth1
+iface eth1 inet static
+    address 10.81.136.1
+    netmask 255.255.255.192
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+lofi
+```
+# A11
+auto eth0
+iface eth0 inet static
+    address 10.81.128.4
+    netmask 255.255.252.0
+    gateway 10.81.128.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Kaela
+```
+# A15
+auto eth0
+iface eth0 inet static
+    address 10.81.144.3
+    netmask 255.255.254.0
+    gateway 10.81.144.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Kobo
+```
+# A15
+auto eth0
+iface eth0 inet static
+    address 10.81.144.4
+    netmask 255.255.254.0
+    gateway 10.81.144.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Moona
+```
+# A11
+auto eth0
+iface eth0 inet static
+    address 10.81.128.3
+    netmask 255.255.252.0
+    gateway 10.81.128.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Ollie
+```
+# A13
+auto eth0
+iface eth0 inet static
+    address 10.81.136.2
+    netmask 255.255.255.192
+    gateway 10.81.136.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Reine
+```
+# A13
+auto eth0
+iface eth0 inet static
+    address 10.81.136.4
+    netmask 255.255.255.192
+    gateway 10.81.136.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Risu
+```
+# A11
+auto eth0
+iface eth0 inet static
+    address 10.81.128.2
+    netmask 255.255.252.0
+    gateway 10.81.128.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Zeta
+```
+# A15
+auto eth0
+iface eth0 inet static
+    address 10.81.144.2
+    netmask 255.255.254.0
+    gateway 10.81.144.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+HoloJP
+```
+# A16
+auto eth0
+iface eth0 inet static
+    address 10.81.64.2
+    netmask 255.255.255.252
+    gateway 10.81.64.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A17
+auto eth1
+iface eth1 inet static
+    address 10.81.32.1
+    netmask 255.255.255.248
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# apt update
+# apt install nano net-tools -y
+
+# route add -net 10.81.16.0 netmask 255.255.255.240 gw 10.81.32.2 # Holo-JP -> A18
+# route add -net 10.81.0.0 netmask 255.255.248.0 gw 10.81.32.3 # Holo-JP -> GEN:1
+# route add -net 10.81.8.0 netmask 255.255.254.0 gw 10.81.32.3 # Holo-JP -> A20
+# route add -net 10.81.10.128 netmask 255.255.255.252 gw 10.81.32.3 # Holo-JP -> GAMERS
+# route add -net 10.81.10.0 netmask 255.255.255.128 gw 10.81.32.3 # Holo-JP -> A22
+```
+GEN0
+```
+# A17
+auto eth0
+iface eth0 inet static
+    address 10.81.32.3
+    netmask 255.255.255.248
+    gateway 10.81.32.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+    
+# A19
+auto eth1
+iface eth1 inet static
+    address 10.81.0.1
+    netmask 255.255.248.0
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf    
+
+# route add -net 10.81.8.0 netmask 255.255.254.0 gw 10.81.0.4 # GEN:0 -> A20
+# route add -net 10.81.10.128 netmask 255.255.255.252 gw 10.81.0.4 # GEN:0 -> GAMERS
+# route add -net 10.81.10.0 netmask 255.255.255.128 gw 10.81.0.4 # GEN:0 -> A22
+```
+GEN1
+```
+# A19
+auto eth0
+iface eth0 inet static
+    address 10.81.0.4
+    netmask 255.255.248.0
+    gateway 10.81.0.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A20
+auto eth1
+iface eth1 inet static
+    address 10.81.8.1
+    netmask 255.255.254.0
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A21
+auto eth2
+iface eth2 inet static
+    address 10.81.10.129
+    netmask 255.255.255.252
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# route add -net 10.81.10.0 netmask 255.255.255.128 gw 10.81.10.130 # GEN:1 -> A22
+```
+Aki_Hachama
+```
+# A20
+auto eth0
+iface eth0 inet static
+    address 10.81.8.3
+    netmask 255.255.254.0
+    gateway 10.81.8.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Ao
+```
+# A18
+auto eth0
+iface eth0 inet static
+    address 10.81.16.3
+    netmask 255.255.255.240
+    gateway 10.81.16.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+DEV_IS
+```
+# A17
+auto eth0
+iface eth0 inet static
+    address 10.81.32.2
+    netmask 255.255.255.248
+    gateway 10.81.32.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A18
+auto eth1
+iface eth1 inet static
+    address 10.81.16.1
+    netmask 255.255.255.240
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+FBK_Matsuri
+```
+# A20
+auto eth0
+iface eth0 inet static
+    address 10.81.8.2
+    netmask 255.255.254.0
+    gateway 10.81.8.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+GAMERS
+```
+# A21
+auto eth0
+iface eth0 inet static
+    address 10.81.10.130
+    netmask 255.255.255.252
+    gateway 10.81.10.129
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+
+# A22
+auto eth1
+iface eth1 inet static
+    address 10.81.10.1
+    netmask 255.255.255.128
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Hajime_Kanide
+```
+# A18
+auto eth0
+iface eth0 inet static
+    address 10.81.16.4
+    netmask 255.255.255.240
+    gateway 10.81.16.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Korone
+```
+# A22
+auto eth0
+iface eth0 inet static
+    address 10.81.10.2
+    netmask 255.255.255.128
+    gateway 10.81.10.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+MiComet
+```
+# A19
+auto eth0
+iface eth0 inet static
+    address 10.81.0.2
+    netmask 255.255.248.0
+    gateway 10.81.0.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Mio
+```
+# A22
+auto eth0
+iface eth0 inet static
+    address 10.81.10.4
+    netmask 255.255.255.128
+    gateway 10.81.10.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Okayu
+```
+# A22
+auto eth0
+iface eth0 inet static
+    address 10.81.10.3
+    netmask 255.255.255.128
+    gateway 10.81.10.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Ririka_Raden
+```
+# A18
+auto eth0
+iface eth0 inet static
+    address 10.81.16.2
+    netmask 255.255.255.240
+    gateway 10.81.16.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+Sora_Robo_AZKi
+```
+# A19
+auto eth0
+iface eth0 inet static
+    address 10.81.0.3
+    netmask 255.255.248.0
+    gateway 10.81.0.1
+    up echo nameserver 192.168.122.1 > /etc/resolv.conf
+```
+
+
+
 
